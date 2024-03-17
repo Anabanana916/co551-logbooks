@@ -11,8 +11,7 @@
     $sql = "INSERT INTO monster";
     $sql .= "(name, image, audio) ";
     $sql .= "VALUES ('$_POST[txtname]', '$imagedata','$audiodata');";
-
-    $result = mysqli_query($db, $sql);
+  $result = mysqli_query($db, $sql);
 
     mysqli_close($db);
 ?>
