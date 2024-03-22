@@ -1,7 +1,10 @@
 <?php
+    session_start();
     $conn = mysqli_connect("127.0.0.1", "root", "", "anawk8");   
-    if ($_POST["selweek"]){
-        $sql = "select * from lotto where wk=$_POST[selweek];";
+    
+
+    if ($_POST){
+        $sql = "SELECT * FROM lotto WHERE wk=$_POST[selweek];";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_array($result);
 
@@ -14,10 +17,10 @@
     }
     
     else {
-        $sql = "select * from lotto;";
+        $sql = "SELECT * FROM lotto;";
         $result = mysqli_query($conn, $sql);
 
-        echo "<form action='$_SESSION[PHP_SELF]' method='post' >";
+        echo "<form action='' method=post>";
         echo "<br/>Select the lottery week ";
         echo "<select name='selweek' >";
         

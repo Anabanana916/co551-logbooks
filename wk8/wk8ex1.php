@@ -14,7 +14,7 @@
     $sql = $sql . "$number[3],$number[4],$number[5],$number[6]);";
 
 
-    echo "$sql";
+    #echo "$sql";
     $result = mysqli_query($conn, $sql);
     echo "<br/>This week's numbers have been saved";
 ?>
